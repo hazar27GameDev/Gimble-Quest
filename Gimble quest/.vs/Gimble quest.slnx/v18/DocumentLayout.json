@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{A3207868-1AF1-447F-8BEB-D52A3FF5DA8D}|Gimble quest\\Gimble quest.pyproj|solutionrelative:Gimble quest\\Enemy.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A3207868-1AF1-447F-8BEB-D52A3FF5DA8D}|Gimble quest\\Gimble quest.pyproj|C:\\Users\\kobin\\OneDrive\\Documents\\GitHub\\Gimble-Quest\\Gimble quest\\Gimble quest\\player.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A3207868-1AF1-447F-8BEB-D52A3FF5DA8D}|Gimble quest\\Gimble quest.pyproj|solutionrelative:Gimble quest\\player.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A3207868-1AF1-447F-8BEB-D52A3FF5DA8D}|Gimble quest\\Gimble quest.pyproj|C:\\Users\\kobin\\OneDrive\\Documents\\GitHub\\Gimble-Quest\\Gimble quest\\Gimble quest\\Items.py||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A3207868-1AF1-447F-8BEB-D52A3FF5DA8D}|Gimble quest\\Gimble quest.pyproj|solutionrelative:Gimble quest\\Items.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A3207868-1AF1-447F-8BEB-D52A3FF5DA8D}|Gimble quest\\Gimble quest.pyproj|C:\\Users\\kobin\\OneDrive\\Documents\\GitHub\\Gimble-Quest\\Gimble quest\\Gimble quest\\Gimble_quest.py||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A3207868-1AF1-447F-8BEB-D52A3FF5DA8D}|Gimble quest\\Gimble quest.pyproj|solutionrelative:Gimble quest\\Gimble_quest.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3207868-1AF1-447F-8BEB-D52A3FF5DA8D}|Gimble quest\\Gimble quest.pyproj|C:\\Users\\kobin\\OneDrive\\Documents\\GitHub\\Gimble-Quest\\Gimble quest\\Gimble quest\\player.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A3207868-1AF1-447F-8BEB-D52A3FF5DA8D}|Gimble quest\\Gimble quest.pyproj|solutionrelative:Gimble quest\\player.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +42,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Items.py",
               "DocumentMoniker": "C:\\Users\\kobin\\OneDrive\\Documents\\GitHub\\Gimble-Quest\\Gimble quest\\Gimble quest\\Items.py",
               "RelativeDocumentMoniker": "Gimble quest\\Items.py",
@@ -50,8 +50,7 @@
               "RelativeToolTip": "Gimble quest\\Items.py",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2026-06-15T05:01:27.536Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-15T05:01:27.536Z"
             },
             {
               "$type": "Document",
@@ -61,14 +60,14 @@
               "RelativeDocumentMoniker": "Gimble quest\\enemy.py",
               "ToolTip": "C:\\Users\\kobin\\OneDrive\\Documents\\GitHub\\Gimble-Quest\\Gimble quest\\Gimble quest\\enemy.py",
               "RelativeToolTip": "Gimble quest\\enemy.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
               "WhenOpened": "2026-06-15T05:01:16.822Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Player.py",
               "DocumentMoniker": "C:\\Users\\kobin\\OneDrive\\Documents\\GitHub\\Gimble-Quest\\Gimble quest\\Gimble quest\\player.py",
               "RelativeDocumentMoniker": "Gimble quest\\player.py",
@@ -81,7 +80,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Gimble_quest.py",
               "DocumentMoniker": "C:\\Users\\kobin\\OneDrive\\Documents\\GitHub\\Gimble-Quest\\Gimble quest\\Gimble quest\\Gimble_quest.py",
               "RelativeDocumentMoniker": "Gimble quest\\Gimble_quest.py",
@@ -89,8 +88,7 @@
               "RelativeToolTip": "Gimble quest\\Gimble_quest.py",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2026-06-15T04:59:22.087Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-15T04:59:22.087Z"
             }
           ]
         }
