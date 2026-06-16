@@ -1,4 +1,4 @@
 class player(object):
-    """description of class"""
+    print("idk")
 
 
