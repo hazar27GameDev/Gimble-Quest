@@ -5,16 +5,23 @@ class Enemy():
         self.attack = attack
         self.defence = defence
 
-    def take_damage(self, damage):
+    def takeDamage(self, damage):
         self.health -= damage
         if self.health < 0:
             self.health = 0
 
-    def is_alive(self):
+    def isAlive(self):
         return self.health > 0
-#another comment
-#comment
+
+
+    def attackPlayer(self, player):
+        damage = self.attack - player.defence
+        if damage < 0:
+            damage = 0
+        player.takeDamage(damage)
+        return damage
     
+   
 
 
 
