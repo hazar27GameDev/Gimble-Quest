@@ -41,13 +41,22 @@
               "WhenOpened": "2026-06-15T05:01:27.536Z"
             },
             {
-              "$type": "Document"
-
+<<<<<<<<< Temporary merge branch 1
+=========
+              "Title": "Enemy.py",
+              "DocumentMoniker": "C:\\Users\\kobin\\OneDrive\\Documents\\GitHub\\Gimble-Quest\\Gimble quest\\Gimble quest\\enemy.py",
+              "RelativeDocumentMoniker": "Gimble quest\\enemy.py",
+              "ToolTip": "C:\\Users\\kobin\\OneDrive\\Documents\\GitHub\\Gimble-Quest\\Gimble quest\\Gimble quest\\enemy.py",
+              "RelativeToolTip": "Gimble quest\\enemy.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-06-15T05:01:16.822Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-
+              "DocumentIndex": 1,
+>>>>>>>>> Temporary merge branch 2
               "Title": "Player.py",
               "DocumentMoniker": "C:\\Users\\himre\\OneDrive\\Desktop\\software engineering\\Adventure\\Gimble-Quest\\Gimble quest\\Gimble quest\\Player.py",
               "RelativeDocumentMoniker": "Gimble quest\\Player.py",
