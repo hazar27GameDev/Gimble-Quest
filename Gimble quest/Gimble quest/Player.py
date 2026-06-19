@@ -1,6 +1,23 @@
 import ToolBox
 
+"""
+Module: Player.py
+Author: Harry Imre
+Date: 16/06/2026
+Purpose: Stores the Player class.
+Parameters: None
+Returns: None
+"""
+
 class Player:
+
+    """
+    Represents an Player.
+    Author: Harry Imre
+    Date: 16/06/2026
+    Parameters: none
+    Returns: Player object
+    """
 
     def __init__(self, name, health, stamina):
         self.name = name
