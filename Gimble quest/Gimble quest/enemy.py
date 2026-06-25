@@ -46,10 +46,13 @@ class Enemy():
 
     # Displays the enemy's information
     def enemyInfo(self):
-        print("Enemy " + self.name + " Info")
+        ToolBox.space()
 
-        ToolBox.line
+        print("Enemy Info: ")
 
+        ToolBox.line()
+
+        print(f"Type: {self.name}")
         print(f"Health: {self.health}")
         print(f"Attack: {self.attack}")
         #print(f"Defence: {self.defence})
@@ -57,6 +60,47 @@ class Enemy():
 
 
 class Bandit(Enemy):
+
+    """
+    Represents a Bandit Inherited from Enemy.
+    Author: Kobi Nichols
+    Date: 22/06/2026
+    Parameters: none
+    Returns: Enemy object
+    """
+
     def __init__(self, name, health, attack):
         super().__init__(name, health, attack)
+
+
+
+class Slime(Enemy):
+
+    """
+    Represents a Slime Inherited from Enemy.
+    Author: Kobi Nichols
+    Date: 25/06/2026
+    Parameters: none
+    Returns: Enemy object
+    """
+
+    def __init__(self, name, health, attack):
+        super().__init__(name, health, attack)
+
+
+class Dragon(Enemy):
+    """
+    Represents a Dragon Inherited from Enemy.
+    Author: Kobi Nichols
+    Date: 25/06/2026
+    Parameters: none
+    Returns: Enemy object
+    """
+
+    def __init__(self, name, health, attack):
+        super().__init__(name, health, attack)
+
+
+
+
 
