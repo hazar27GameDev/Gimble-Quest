@@ -19,11 +19,11 @@ class Enemy():
     Returns: Enemy object
     """
 
-    def __init__ (self, name, health, attack, defence):
+    def __init__ (self, name, health, attack):
         self.name = name
         self.health = health
         self.attack = attack
-        self.defence = defence
+        #self.defence = defence
 
 
     # If the enemy takes damage, this function will be called to reduce the health of the enemy
@@ -50,9 +50,13 @@ class Enemy():
 
         ToolBox.line
 
-        print("Health: " + str(self.health))
-        print("Attack: " + str(self.attack))
-        print("Defence: " + str(self.defence))
+        print(f"Health: {self.health}")
+        print(f"Attack: {self.attack}")
+        #print(f"Defence: {self.defence})
 
 
+
+class Bandit(Enemy):
+    def __init__(self, name, health, attack):
+        super().__init__(name, health, attack)
 
