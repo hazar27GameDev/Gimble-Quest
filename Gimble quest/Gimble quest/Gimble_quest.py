@@ -1,5 +1,6 @@
 import ToolBox
 import Player
+import enemy
 
 #Main menu
 def MainMenu():
@@ -67,11 +68,13 @@ def CharacterCreator():
 def interaction(enemy):
     ToolBox.space()
 
-    print(f"A {enemy} approaches you")
+    print(f"A {enemy.name} approaches you")
 
     ToolBox.line()
 
     print("What do you do")
+
+    enemy.enemyInfo()
 
     ToolBox.line()
     
@@ -92,6 +95,7 @@ def interaction(enemy):
                 break
             case "C":
                 print("You decide to check your states")
+                Character.PlayerInfo(TypeClass)
                 break
             case _:
                 print("Invalid option: Please try again")
@@ -112,4 +116,6 @@ Character = Player.Player(UserName, health, stamina)
 TypeClass = Player.ClassType(ClassType)
 Character.PlayerInfo(TypeClass)
 
-interaction("Bandit")
+Bandit = enemy.Bandit("Bandit", 50, 25)
+
+interaction(Bandit)
