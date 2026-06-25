@@ -37,7 +37,9 @@ class Player:
         ToolBox.space()
 
         print("Player Info: ")
+
         ToolBox.line()
+
         print(f"Name: {self.name}")
         print(f"Class: {TypeClass.ClassType}")
         print(f"Health: {self.health}")

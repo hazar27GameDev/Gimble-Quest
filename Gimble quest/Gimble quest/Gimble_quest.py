@@ -57,9 +57,45 @@ def CharacterCreator():
                 class_type = "Ranger"
                 health = 75
                 break
+            case _:
+                print("Invalid option: Please try again")
         if picked == True:
             break
     return UserName, health, class_type
+
+#interactions
+def interaction(enemy):
+    ToolBox.space()
+
+    print(f"A {enemy} approaches you")
+
+    ToolBox.line()
+
+    print("What do you do")
+
+    ToolBox.line()
+    
+    print("A. Attack")
+    print("B. Use item")
+    print("C. Display player info")
+
+    ToolBox.space()
+    UserChoice = input("Enter option: ")
+
+    while True:
+        match UserChoice.upper():
+            case "A":
+                print("You decide to attack")
+                break
+            case "B":
+                print("You decide to use a item")
+                break
+            case "C":
+                print("You decide to check your states")
+                break
+            case _:
+                print("Invalid option: Please try again")
+
 
 #MainMenu call dahhh
 MainMenu()
@@ -75,3 +111,5 @@ stamina = 100
 Character = Player.Player(UserName, health, stamina)
 TypeClass = Player.ClassType(ClassType)
 Character.PlayerInfo(TypeClass)
+
+interaction("Bandit")
