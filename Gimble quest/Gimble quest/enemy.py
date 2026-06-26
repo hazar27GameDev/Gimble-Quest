@@ -1,4 +1,5 @@
 import ToolBox # Use of tools like lines making the prosess of creating code faster and efficent
+from Player import *
 
 """
 Module: Enemy.py
@@ -68,13 +69,21 @@ class Bandit(Enemy):
     Parameters: none
     Returns: Enemy object
     """
-
+    
     def __init__(self, name, health, attack):
         super().__init__(name, health, attack)
 
+    # The banits specific attack
     def attack(self, attack):
         self.attack = attack
         print(f"{self.name} attacks with {self.attack} damage")
+        Player.TakeDamage(self.attack - Player.defence)
+        
+
+    # The banits specific block
+    def block(self, block):
+        self.block = block
+        print(f"{self.name} blocks with {self.block} damage")
 
 
 
@@ -88,9 +97,21 @@ class Slime(Enemy):
     Parameters: none
     Returns: Enemy object
     """
-
+    # Slime information
     def __init__(self, name, health, attack):
         super().__init__(name, health, attack)
+
+    # The Slimes specific attack
+    def attack(self, attack):
+        self.attack = attack
+        print(f"{self.name} attacks with {self.attack} damage")
+        Player.TakeDamage(self.attack - Player.defence)
+        
+
+    # The Slimes specific block
+    def block(self, block):
+        self.block = block
+        print(f"{self.name} blocks with {self.block} damage")
 
 
 class Dragon(Enemy):
@@ -101,6 +122,7 @@ class Dragon(Enemy):
     Parameters: none
     Returns: Enemy object
     """
+
 
     def __init__(self, name, health, attack):
         super().__init__(name, health, attack)

@@ -13,3 +13,10 @@ class item:
 
     def AddDamage(self):
         self.damage = 2
+
+class HealthPotion(item):
+
+    def __init__(self):
+        super().__init__("Health Potion", 0, 10, 0 )
+
+    
