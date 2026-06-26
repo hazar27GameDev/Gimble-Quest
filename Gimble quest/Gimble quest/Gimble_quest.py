@@ -43,19 +43,19 @@ def CharacterCreator():
             case "A":
                 picked = True
                 print("You picked Fighter")
-                class_type = "Fighter"
+                class_type = Player.Fighter("Fighter")
                 health = 100
                 break
             case "B":
                 picked = True
                 print("You picked Mage")
-                class_type = "Mage"
+                class_type = Player.Mage("Mage")
                 health = 50
                 break
             case "C":
                 picked = True
                 print("You picked Ranger")
-                class_type = "Ranger"
+                class_type = Player.Ranger("Ranger")
                 health = 75
                 break
             case _:
@@ -91,10 +91,11 @@ def interaction(enemy):
                 print("You decide to attack")
                 ToolBox.space()
 
-                print("A. Hit")
+                print("A. Action")
                 print("B. Block")
 
                 Action = input("Enter choice: ")
+                TypeClass.FireBall()
                 break
             case "B":
                 print("You decide to use a item")
@@ -119,7 +120,7 @@ health = info[1]
 stamina = 100
 
 Character = Player.Player(UserName, health, stamina)
-TypeClass = Player.ClassType(ClassType)
+TypeClass = ClassType
 Character.PlayerInfo(TypeClass)
 
 ToolBox.space()
