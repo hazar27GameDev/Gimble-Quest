@@ -72,6 +72,11 @@ class Bandit(Enemy):
     def __init__(self, name, health, attack):
         super().__init__(name, health, attack)
 
+    def attack(self, attack):
+        self.attack = attack
+        print(f"{self.name} attacks with {self.attack} damage")
+
+
 
 
 class Slime(Enemy):
