@@ -89,6 +89,12 @@ def interaction(enemy):
         match UserChoice.upper():
             case "A":
                 print("You decide to attack")
+                ToolBox.space()
+
+                print("A. Hit")
+                print("B. Block")
+
+                Action = input("Enter choice: ")
                 break
             case "B":
                 print("You decide to use a item")
@@ -115,6 +121,10 @@ stamina = 100
 Character = Player.Player(UserName, health, stamina)
 TypeClass = Player.ClassType(ClassType)
 Character.PlayerInfo(TypeClass)
+
+ToolBox.space()
+ToolBox.line()
+input("Click Enter to begin: ")
 
 Bandit = enemy.Bandit("Bandit", 50, 25)
 

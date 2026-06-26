@@ -47,5 +47,12 @@ class Player:
 
 
 class ClassType:
+    """
+    Represents a ClassType Inherited from Player.
+    Author: Harry imre
+    Date: 22/06/2026
+    Parameters: none
+    Returns: Player Class
+    """
     def __init__(self, ClassType):
         self.ClassType = ClassType

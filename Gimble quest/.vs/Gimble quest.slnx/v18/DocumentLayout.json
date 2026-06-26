@@ -4,13 +4,20 @@
   "Documents": [
     {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<<<< Temporary merge branch 1
       "AbsoluteMoniker": "D:0:0:{A3207868-1AF1-447F-8BEB-D52A3FF5DA8D}|Gimble quest\\Gimble quest.pyproj|C:\\Users\\himre\\OneDrive\\Desktop\\software engineering\\Adventure\\Gimble-Quest\\Gimble quest\\Gimble quest\\Player.py||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A3207868-1AF1-447F-8BEB-D52A3FF5DA8D}|Gimble quest\\Gimble quest.pyproj|solutionrelative:Gimble quest\\Player.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
+=======
+>>>>>>> Stashed changes
       "AbsoluteMoniker": "D:0:0:{A3207868-1AF1-447F-8BEB-D52A3FF5DA8D}|Gimble quest\\Gimble quest.pyproj|C:\\Users\\himre\\OneDrive\\Desktop\\software engineering\\Adventure\\Gimble-Quest\\Gimble quest\\Gimble quest\\Gimble_quest.py||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A3207868-1AF1-447F-8BEB-D52A3FF5DA8D}|Gimble quest\\Gimble quest.pyproj|solutionrelative:Gimble quest\\Gimble_quest.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3207868-1AF1-447F-8BEB-D52A3FF5DA8D}|Gimble quest\\Gimble quest.pyproj|C:\\Users\\himre\\OneDrive\\Desktop\\software engineering\\Adventure\\Gimble-Quest\\Gimble quest\\Gimble quest\\Player.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A3207868-1AF1-447F-8BEB-D52A3FF5DA8D}|Gimble quest\\Gimble quest.pyproj|solutionrelative:Gimble quest\\Player.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A3207868-1AF1-447F-8BEB-D52A3FF5DA8D}|Gimble quest\\Gimble quest.pyproj|C:\\Users\\himre\\OneDrive\\Desktop\\software engineering\\Adventure\\Gimble-Quest\\Gimble quest\\Gimble quest\\Enemy.py||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -21,6 +28,7 @@
       "RelativeMoniker": "D:0:0:{A3207868-1AF1-447F-8BEB-D52A3FF5DA8D}|Gimble quest\\Gimble quest.pyproj|solutionrelative:Gimble quest\\Items.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:3:0:{A3207868-1AF1-447F-8BEB-D52A3FF5DA8D}|Gimble quest\\Gimble quest.pyproj|C:\\Users\\himre\\OneDrive\\Desktop\\software engineering\\Adventure\\Gimble-Quest\\Gimble quest\\Gimble quest\\ToolBox.py||{8B382828-6202-11D1-8870-0000F87579D2}",
 =========
 =======
@@ -56,6 +64,10 @@
       "AbsoluteMoniker": "D:0:0:{A3207868-1AF1-447F-8BEB-D52A3FF5DA8D}|Gimble quest\\Gimble quest.pyproj|C:\\Users\\kobin\\OneDrive\\Documents\\GitHub\\Gimble-Quest\\Gimble quest\\Gimble quest\\ToolBox.py||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A3207868-1AF1-447F-8BEB-D52A3FF5DA8D}|Gimble quest\\Gimble quest.pyproj|solutionrelative:Gimble quest\\ToolBox.py||{8B382828-6202-11D1-8870-0000F87579D2}"
 >>>>>>> Stashed changes
+=======
+      "AbsoluteMoniker": "D:0:0:{A3207868-1AF1-447F-8BEB-D52A3FF5DA8D}|Gimble quest\\Gimble quest.pyproj|C:\\Users\\himre\\OneDrive\\Desktop\\software engineering\\Adventure\\Gimble-Quest\\Gimble quest\\Gimble quest\\ToolBox.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A3207868-1AF1-447F-8BEB-D52A3FF5DA8D}|Gimble quest\\Gimble quest.pyproj|solutionrelative:Gimble quest\\ToolBox.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+>>>>>>> Stashed changes
     }
   ],
   "DocumentGroupContainers": [
@@ -66,6 +78,10 @@
         {
           "DockedWidth": 200,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+          "SelectedChildIndex": 4,
+>>>>>>> Stashed changes
 =======
           "SelectedChildIndex": 4,
 >>>>>>> Stashed changes
@@ -93,8 +109,12 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<<<< Temporary merge branch 1
               "WhenOpened": "2026-06-25T02:58:04.089Z"
+=======
+              "WhenOpened": "2026-06-25T03:28:52.528Z"
+>>>>>>> Stashed changes
             },
             {
               "$type": "Document",
@@ -104,9 +124,10 @@
               "RelativeDocumentMoniker": "Gimble quest\\enemy.py",
               "ToolTip": "C:\\Users\\himre\\OneDrive\\Desktop\\software engineering\\Adventure\\Gimble-Quest\\Gimble quest\\Gimble quest\\enemy.py",
               "RelativeToolTip": "Gimble quest\\enemy.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAAAEEAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2026-06-18T01:50:39.659Z"
+              "WhenOpened": "2026-06-25T03:28:52.561Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -118,29 +139,34 @@
               "RelativeToolTip": "Gimble quest\\Items.py",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2026-06-25T02:58:04.471Z"
+              "WhenOpened": "2026-06-25T03:28:52.563Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Player.py",
               "DocumentMoniker": "C:\\Users\\himre\\OneDrive\\Desktop\\software engineering\\Adventure\\Gimble-Quest\\Gimble quest\\Gimble quest\\Player.py",
               "RelativeDocumentMoniker": "Gimble quest\\Player.py",
               "ToolTip": "C:\\Users\\himre\\OneDrive\\Desktop\\software engineering\\Adventure\\Gimble-Quest\\Gimble quest\\Gimble quest\\Player.py",
               "RelativeToolTip": "Gimble quest\\Player.py",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACYAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAIwDYAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2026-06-25T02:58:04.472Z",
+              "WhenOpened": "2026-06-25T03:28:52.688Z",
               "EditorCaption": ""
+<<<<<<< Updated upstream
 =========
               "WhenOpened": "2026-06-25T02:58:21.235Z"
 =======
               "WhenOpened": "2026-06-25T03:29:58.972Z"
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< Updated upstream
               "Title": "Enemy.py",
               "DocumentMoniker": "C:\\Users\\kobin\\OneDrive\\Documents\\GitHub\\Gimble-Quest\\Gimble quest\\Gimble quest\\enemy.py",
               "RelativeDocumentMoniker": "Gimble quest\\enemy.py",
@@ -188,17 +214,24 @@
               "$type": "Document",
               "DocumentIndex": 2,
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
               "Title": "Gimble_quest.py",
               "DocumentMoniker": "C:\\Users\\kobin\\OneDrive\\Documents\\GitHub\\Gimble-Quest\\Gimble quest\\Gimble quest\\Gimble_quest.py",
               "RelativeDocumentMoniker": "Gimble quest\\Gimble_quest.py",
               "ToolTip": "C:\\Users\\kobin\\OneDrive\\Documents\\GitHub\\Gimble-Quest\\Gimble quest\\Gimble quest\\Gimble_quest.py",
               "RelativeToolTip": "Gimble quest\\Gimble_quest.py",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<<<< Temporary merge branch 1
               "ViewState": "AgIAAD4AAAAAAAAAAAAAAEsAAAAAAAAAAAAAAA==",
+=======
+              "ViewState": "AgIAAEoAAAAAAAAAAAAAwGAAAAAwAAAAAAAAAA==",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2026-06-25T02:58:04.474Z",
+              "WhenOpened": "2026-06-25T03:28:52.787Z",
               "EditorCaption": ""
+<<<<<<< Updated upstream
 =========
               "ViewState": "AgIAAFsAAAAAAAAAAAAiwFkAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
@@ -208,6 +241,8 @@
               "ViewState": "AgIAAFsAAAAAAAAAAAAiwFkAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
               "WhenOpened": "2026-06-25T03:29:59.147Z"
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
             }
           ]
