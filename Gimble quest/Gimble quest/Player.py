@@ -25,8 +25,9 @@ class Player:
         self.health = health
         self.stamina = stamina
 
-    def attack(damage):
+    def attack(damage, stamina):
         print(f"You did {damage} damage")
+        print(f"-{stamina} stamina")
 
     def TakeDamage(self, amount):
         self.health -= amount
@@ -52,24 +53,30 @@ class Fighter:
     Represents Class type.
     Author: Harry Imre
     Date: 26/06/2026
-    Parameters: none
+    Parameters: Fighter
     Returns: Player object
     """
     def __init__(self, name):
         self.name = name
 
-    def slash(self):
+    def Slash(self):
         ToolBox.space()
         ToolBox.line()
         print("You slash towards the enemy")
-        Player.attack(15)
+        Player.attack(15, 10)
+
+    def DoubleSlash(self):
+        ToolBox.space()
+        ToolBox.line()
+        print("You slash towards the enemy twice")
+        Player.attack(25, 20)
 
 class Mage:
     """
     Represents Class type.
     Author: Harry Imre
     Date: 26/06/2026
-    Parameters: none
+    Parameters: Mage
     Returns: Player object
     """
     def __init__(self, name):
@@ -79,14 +86,14 @@ class Mage:
         ToolBox.space()
         ToolBox.line()
         print("You shoot a fire ball towards the enemy")
-        Player.attack(20)
+        Player.attack(30, 30)
 
 class Ranger:
     """
     Represents Class type.
     Author: Harry Imre
     Date: 26/06/2026
-    Parameters: none
+    Parameters: Ranger
     Returns: Player object
     """
     def __init__(self, name):
@@ -96,5 +103,10 @@ class Ranger:
         ToolBox.space()
         ToolBox.line()
         print("You shoot a arrow towards the enemy")
-        Player.attack(10)
+        Player.attack(10, 5)
 
+    def ChargeShot(self):
+        ToolBox.space()
+        ToolBox.line()
+        print("You shoot a charged arrow towards the enemy")
+        Player.attack(20, 20)

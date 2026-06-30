@@ -95,7 +95,13 @@ def interaction(enemy):
                 print("B. Block")
 
                 Action = input("Enter choice: ")
-                TypeClass.FireBall()
+                match TypeClass.name:
+                    case "Fighter":
+                        TypeClass.Slash()
+                    case "Mage":
+                        TypeClass.FireBall()
+                    case "Ranger":
+                        TypeClass.Arrow()
                 break
             case "B":
                 print("You decide to use a item")
