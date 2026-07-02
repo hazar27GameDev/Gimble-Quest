@@ -1,4 +1,3 @@
-from calendar import c
 import ToolBox
 
 """
@@ -25,8 +24,8 @@ class Player:
         self.health = health
         self.stamina = stamina
 
-    def attack(damage):
-        print(f"You did {damage} damage")
+    def attack():
+        print("Your attacking")
 
     def TakeDamage(self, amount):
         self.health -= amount
@@ -42,59 +41,18 @@ class Player:
         ToolBox.line()
 
         print(f"Name: {self.name}")
-        print(f"Class: {TypeClass.name}")
+        print(f"Class: {TypeClass.ClassType}")
         print(f"Health: {self.health}")
         print(f"Stamina: {self.stamina}")
 
 
-class Fighter:
+class ClassType:
     """
-    Represents Class type.
-    Author: Harry Imre
-    Date: 26/06/2026
+    Represents a ClassType Inherited from Player.
+    Author: Harry imre
+    Date: 22/06/2026
     Parameters: none
-    Returns: Player object
+    Returns: Player Class
     """
-    def __init__(self, name):
-        self.name = name
-
-    def slash(self):
-        ToolBox.space()
-        ToolBox.line()
-        print("You slash towards the enemy")
-        Player.attack(15)
-
-class Mage:
-    """
-    Represents Class type.
-    Author: Harry Imre
-    Date: 26/06/2026
-    Parameters: none
-    Returns: Player object
-    """
-    def __init__(self, name):
-        self.name = name
-
-    def FireBall(self):
-        ToolBox.space()
-        ToolBox.line()
-        print("You shoot a fire ball towards the enemy")
-        Player.attack(20)
-
-class Ranger:
-    """
-    Represents Class type.
-    Author: Harry Imre
-    Date: 26/06/2026
-    Parameters: none
-    Returns: Player object
-    """
-    def __init__(self, name):
-        self.name = name
-
-    def Arrow(self):
-        ToolBox.space()
-        ToolBox.line()
-        print("You shoot a arrow towards the enemy")
-        Player.attack(10)
-
+    def __init__(self, ClassType):
+        self.ClassType = ClassType
