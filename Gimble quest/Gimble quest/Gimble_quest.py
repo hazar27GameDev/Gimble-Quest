@@ -15,7 +15,6 @@ def MainMenu():
     ToolBox.space()
 
 
-
 #creats the character 
 def CharacterCreator():
     print("Character Creator: ")
