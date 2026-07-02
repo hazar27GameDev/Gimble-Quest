@@ -65,8 +65,11 @@ def CharacterCreator():
             break
     return UserName, health, class_type
 
+def EnemyAction(type):
+    type.attack(10)
+
 #interactions
-def interaction(enemy):
+def Interaction(enemy):
     ToolBox.space()
 
     print(f"A {enemy.name} approaches you")
@@ -126,8 +129,6 @@ TypeClass = info[2]
 health = info[1]
 stamina = 100
 
-
-
 Character = Player.Player(UserName, health, stamina)
 Character.PlayerInfo(TypeClass)
 
@@ -137,5 +138,7 @@ input("Click Enter to begin: ")
 
 Bandit = enemy.Bandit("Bandit", 50, 25)
 
-interaction(Bandit)
+Interaction(Bandit)
+
+EnemyAction(Bandit)
 
