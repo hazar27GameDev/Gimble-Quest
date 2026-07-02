@@ -11,7 +11,7 @@
     <OutputPath>.</OutputPath>
     <Name>Gimble quest</Name>
     <RootNamespace>Gimble quest</RootNamespace>
-<<<<<<< HEAD
+>>>>>>> HEAD
     <InterpreterId>MSBuild|python|$(MSBuildProjectFullPath)</InterpreterId>
 =======
 >>>>>>> parent of 9b63c95 (Added to Enemy 1/07)
