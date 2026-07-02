@@ -11,7 +11,10 @@
     <OutputPath>.</OutputPath>
     <Name>Gimble quest</Name>
     <RootNamespace>Gimble quest</RootNamespace>
+<<<<<<< HEAD
     <InterpreterId>MSBuild|python|$(MSBuildProjectFullPath)</InterpreterId>
+=======
+>>>>>>> parent of 9b63c95 (Added to Enemy 1/07)
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,6 +33,7 @@
     </Compile>
     <Compile Include="ToolBox.py" />
   </ItemGroup>
+<<<<<<< HEAD
   <ItemGroup>
     <Interpreter Include="env\">
       <Id>env</Id>
@@ -50,6 +54,8 @@
       <Architecture>X64</Architecture>
     </Interpreter>
   </ItemGroup>
+=======
+>>>>>>> parent of 9b63c95 (Added to Enemy 1/07)
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
        Visual Studio and specify your pre- and post-build commands in

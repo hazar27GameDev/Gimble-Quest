@@ -94,7 +94,7 @@ class Slime(Enemy):
     Represents a Slime Inherited from Enemy.
     Author: Kobi Nichols
     Date: 25/06/2026
-    Parameters: attack, health, name
+    Parameters: none
     Returns: Enemy object
     """
     # Slime information
@@ -119,7 +119,7 @@ class Dragon(Enemy):
     Represents a Dragon Inherited from Enemy.
     Author: Kobi Nichols
     Date: 25/06/2026
-    Parameters: Dragon name, health, attack
+    Parameters: none
     Returns: Enemy object
     """
 
