@@ -14,6 +14,20 @@ def MainMenu():
     ToolBox.line()
     ToolBox.space()
 
+def enemyAttack():
+    ToolBox.space()
+
+    print(f"{enemy.name} charges at you.")
+
+    print(f"{enemy.name} attacks with {enemy.damage}")
+
+    enemy.info
+
+    ToolBox.line()
+    
+    
+
+
 #creats the character 
 def CharacterCreator():
     print("Character Creator: ")
@@ -112,7 +126,7 @@ def interaction(enemy):
                 break
             case _:
                 print("Invalid option: Please try again")
-
+    
 
 #MainMenu call dahhh
 MainMenu()
@@ -126,7 +140,6 @@ health = info[1]
 stamina = 100
 
 Character = Player.Player(UserName, health, stamina)
-TypeClass = ClassType
 Character.PlayerInfo(TypeClass)
 
 ToolBox.space()
@@ -136,3 +149,6 @@ input("Click Enter to begin: ")
 Bandit = enemy.Bandit("Bandit", 50, 25)
 
 interaction(Bandit)
+
+enemyAttack()
+
