@@ -59,17 +59,19 @@ class Fighter:
     def __init__(self, name):
         self.name = name
 
-    def Slash(self):
+    def Slash(self, enemy):
         ToolBox.space()
         ToolBox.line()
         print("You slash towards the enemy")
         Player.attack(15, 10)
+        enemy.health -= 15
 
-    def DoubleSlash(self):
+    def DoubleSlash(self, enemy):
         ToolBox.space()
         ToolBox.line()
         print("You slash towards the enemy twice")
         Player.attack(25, 20)
+        enemy.health -= 25
 
 class Mage:
     """
@@ -82,11 +84,12 @@ class Mage:
     def __init__(self, name):
         self.name = name
 
-    def FireBall(self):
+    def FireBall(self, enemy):
         ToolBox.space()
         ToolBox.line()
         print("You shoot a fire ball towards the enemy")
         Player.attack(30, 30)
+        enemy.health -= 30
 
 class Ranger:
     """
@@ -99,14 +102,16 @@ class Ranger:
     def __init__(self, name):
         self.name = name
 
-    def Arrow(self):
+    def Arrow(self, enemy):
         ToolBox.space()
         ToolBox.line()
         print("You shoot a arrow towards the enemy")
         Player.attack(10, 5)
+        enemy.health -= 10
 
-    def ChargeShot(self):
+    def ChargeShot(self, enemy):
         ToolBox.space()
         ToolBox.line()
         print("You shoot a charged arrow towards the enemy")
-        Player.attack(20, 20)
+        Player.attack(20, 15)
+        enemy.health -= 20

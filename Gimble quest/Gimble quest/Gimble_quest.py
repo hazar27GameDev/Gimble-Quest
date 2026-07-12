@@ -66,6 +66,8 @@ def CharacterCreator():
 
 #interactions
 def interaction(enemy):
+    EndTurn = False
+
     ToolBox.space()
 
     print(f"A {enemy.name} approaches you")
@@ -76,42 +78,85 @@ def interaction(enemy):
 
     enemy.enemyInfo()
 
-    ToolBox.line()
-    
-    print("A. Attack")
-    print("B. Use item")
-    print("C. Display player info")
-
-    ToolBox.space()
-    UserChoice = input("Enter option: ")
-
     while True:
-        match UserChoice.upper():
-            case "A":
-                print("You decide to attack")
-                ToolBox.space()
+        ToolBox.line()
+    
+        print("A. Attack")
+        print("B. Use item")
+        print("C. Display player info")
 
-                print("A. Action")
-                print("B. Block")
+        ToolBox.space()
+        UserChoice = input("Enter option: ")
 
-                Action = input("Enter choice: ")
-                match TypeClass.name:
-                    case "Fighter":
-                        TypeClass.Slash()
-                    case "Mage":
-                        TypeClass.FireBall()
-                    case "Ranger":
-                        TypeClass.Arrow()
-                break
-            case "B":
-                print("You decide to use a item")
-                break
-            case "C":
-                print("You decide to check your states")
-                Character.PlayerInfo(TypeClass)
-                break
-            case _:
-                print("Invalid option: Please try again")
+        while True:
+            match UserChoice.upper():
+                case "A":
+                    EndTurn = True
+                    print("You decide to attack")
+                    ToolBox.space()
+
+                    print("A. Attack")
+                    print("B. Block")
+
+                    Action = input("Enter choice: ")
+                    match TypeClass.name:
+                        case "Fighter":
+                            ToolBox.space()
+
+                            print("A. Slash")
+                            print("B. Double slash")
+
+                            Attack = input("Enter choice: ")
+
+                            match Attack.upper():
+                                case "A":
+                                    TypeClass.Slash(enemy)
+                                    break
+                                case "B":
+                                    TypeClass.DoubleSlash(enemy)
+                                    break
+
+                        case "Mage":
+                            ToolBox.space()
+
+                            print("A. FireBall")
+
+                            Attack = input("Enter choice: ")
+
+                            match Attack.upper():
+                                case "A":
+                                    TypeClass.FireBall(enemy)
+                                    break
+
+                        case "Ranger":
+                            ToolBox.space()
+
+                            print("A. Arrow")
+                            print("B. Charge shot")
+
+                            Attack = input("Enter choice: ")
+
+                            match Attack.upper():
+                                case "A":
+                                    TypeClass.Arrow(enemy)
+                                    break
+                                case "B":
+                                    TypeClass.ChargeShot(enemy)
+                                    break
+
+                    break
+                case "B":
+                    EndTurn = True
+                    print("You decide to use a item")
+                    break
+                case "C":
+                    print("You decide to check your states")
+                    Character.PlayerInfo(TypeClass)
+                    break
+                case _:
+                    print("Invalid option: Please try again")
+        if EndTurn == True:
+            break
 
 
 #MainMenu call dahhh
