@@ -55,7 +55,7 @@ class Enemy():
 
         print(f"Type: {self.name}")
         print(f"Health: {self.health}")
-        print(f"Attack: {self.attack}")
+        print(f"Attack power: {self.attack}")
         #print(f"Defence: {self.defence})
 
 
@@ -70,14 +70,16 @@ class Bandit(Enemy):
     Returns: Enemy object
     """
     
-    def __init__(self, name, health, attack):
-        super().__init__(name, health, attack)
+    def __init__(self, name, health, damage):
+        super().__init__(name, health, damage)
 
     # The banits specific attack
-    def attack(self, attack):
-        self.attack = attack
-        print(f"{self.name} attacks with {self.attack} damage")
-        Player.TakeDamage(self.attack - Player.defence)
+    def attack(self, damage):
+        ToolBox.space()
+        ToolBox.line()
+
+        print(f"The Bandit slash you -{damage}")
+        Player.takeDamage(damage)
         
 
     # The banits specific block

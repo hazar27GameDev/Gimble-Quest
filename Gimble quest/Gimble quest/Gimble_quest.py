@@ -1,3 +1,4 @@
+import random
 import ToolBox
 import Player
 import enemy
@@ -64,10 +65,16 @@ def CharacterCreator():
             break
     return UserName, health, class_type
 
+def EnemyAction(enemy):
+    action = random.randint(1, 3)
+
+    if action == 1:
+        print("block")
+    else:
+        enemy.attack(enemy.damage)
+
 #interactions
 def interaction(enemy):
-    EndTurn = False
-
     ToolBox.space()
 
     print(f"A {enemy.name} approaches you")
@@ -75,13 +82,15 @@ def interaction(enemy):
     ToolBox.line()
 
     print("What do you do")
-
+    
     enemy.enemyInfo()
 
     while True:
+        EndTurn = False
+
         ToolBox.line()
     
-        print("A. Attack")
+        print("A. Action")
         print("B. Use item")
         print("C. Display player info")
 
@@ -103,8 +112,8 @@ def interaction(enemy):
                         case "Fighter":
                             ToolBox.space()
 
-                            print("A. Slash")
-                            print("B. Double slash")
+                            print("A. Slash - 15HP, 10SP")
+                            print("B. Double slash - 25HP, 20SP")
 
                             Attack = input("Enter choice: ")
 
@@ -119,20 +128,30 @@ def interaction(enemy):
                         case "Mage":
                             ToolBox.space()
 
-                            print("A. FireBall")
+                            print("A. Fire breath - 10HP, 10SP")
+                            print("B. Spark bolt - 15HP, 20SP")
+                            print("C. FireBall - 30HP, 30SP")
 
                             Attack = input("Enter choice: ")
 
                             match Attack.upper():
                                 case "A":
+                                    TypeClass.FireBreath(enemy)
+                                    break
+
+                                case "B":
+                                    TypeClass.SparkBolt(enemy)
+                                    break
+
+                                case "C":
                                     TypeClass.FireBall(enemy)
                                     break
 
                         case "Ranger":
                             ToolBox.space()
 
-                            print("A. Arrow")
-                            print("B. Charge shot")
+                            print("A. Arrow - 10HP, 5SP")
+                            print("B. Charge shot - 20HP, 15SP")
 
                             Attack = input("Enter choice: ")
 
@@ -156,7 +175,8 @@ def interaction(enemy):
                 case _:
                     print("Invalid option: Please try again")
         if EndTurn == True:
-            break
+            enemy.enemyInfo()
+            EnemyAction(enemy)
 
 
 #MainMenu call dahhh
