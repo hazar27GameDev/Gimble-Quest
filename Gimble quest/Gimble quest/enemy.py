@@ -74,12 +74,12 @@ class Bandit(Enemy):
         super().__init__(name, health, damage)
 
     # The banits specific attack
-    def attack(self, damage):
+    def attack(self):
         ToolBox.space()
         ToolBox.line()
 
-        print(f"The Bandit slash you -{damage}")
-        Player.takeDamage(damage)
+        print(f"The Bandit slash you -{self.damage}")
+        Player.takeDamage(self.damage)
         
 
     # The banits specific block

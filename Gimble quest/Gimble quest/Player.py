@@ -47,7 +47,7 @@ class Player:
         print(f"Health: {self.health}")
         print(f"Stamina: {self.stamina}")
 
-
+#fighter SubClass with all abilitys
 class Fighter:
     """
     Represents Class type.
@@ -72,7 +72,7 @@ class Fighter:
         print("You slash towards the enemy twice")
         Player.attack(25, 20)
         enemy.takeDamage(25)
-
+#mage SubClass with all abilitys
 class Mage:
     """
     Represents Class type.
@@ -104,7 +104,7 @@ class Mage:
         print("You shoot a fire ball towards the enemy")
         Player.attack(30, 30)
         enemy.takeDamage(30)
-
+#ranger SubClass with all abilitys
 class Ranger:
     """
     Represents Class type.

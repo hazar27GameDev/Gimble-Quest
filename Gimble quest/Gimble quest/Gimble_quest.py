@@ -65,13 +65,13 @@ def CharacterCreator():
             break
     return UserName, health, class_type
 
-def EnemyAction(enemy):
+def EnemyAction(EnemyType):
     action = random.randint(1, 3)
 
     if action == 1:
         print("block")
     else:
-        enemy.attack(enemy.damage)
+        EnemyType.attack()
 
 #interactions
 def interaction(enemy):
