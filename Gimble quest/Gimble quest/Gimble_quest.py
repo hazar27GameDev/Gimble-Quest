@@ -3,6 +3,8 @@ import ToolBox
 import Player
 import enemy
 
+Bandit = enemy.Bandit("Bandit", 50, 25)
+
 #Main menu
 def MainMenu():
     print("Welcome to Epic RPG Game")
@@ -71,7 +73,10 @@ def EnemyAction(EnemyType):
     if action == 1:
         print("block")
     else:
-        EnemyType.attack()
+        damage = EnemyType.EnemyAttack()
+        Character.TakeDamage(damage)
+
+        ToolBox.space()
 
 #interactions
 def interaction(enemy):
@@ -176,7 +181,15 @@ def interaction(enemy):
                     print("Invalid option: Please try again")
         if EndTurn == True:
             enemy.enemyInfo()
-            EnemyAction(enemy)
+            if enemy.health < 1:
+                ToolBox.space()
+                ToolBox.line()
+
+                print(f"You defeated the {enemy.name}")
+
+                break
+            else:
+                EnemyAction(enemy)
 
 
 #MainMenu call dahhh
@@ -197,7 +210,5 @@ Character.PlayerInfo(TypeClass)
 ToolBox.space()
 ToolBox.line()
 input("Click Enter to begin: ")
-
-Bandit = enemy.Bandit("Bandit", 50, 25)
 
 interaction(Bandit)

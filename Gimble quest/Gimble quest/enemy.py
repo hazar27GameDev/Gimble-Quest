@@ -33,17 +33,13 @@ class Enemy():
         if self.health < 0:
             self.health = 0
 
-    # Checks if the enemy is still alive 
-    def isAlive(self):
-        return self.health > 0
-
     # Attacks the player and returns the damage dealt
-    def attackPlayer(self, player):
-        damage = self.attack - player.defence
-        if damage < 0:
-            damage = 0
-        player.takeDamage(damage)
-        return damage
+    #def attackPlayer(self, player):
+        #damage = self.attack - player.defence
+        #if damage < 0:
+            #damage = 0
+        #player.takeDamage(damage)
+        #return damage
 
     # Displays the enemy's information
     def enemyInfo(self):
@@ -74,12 +70,12 @@ class Bandit(Enemy):
         super().__init__(name, health, damage)
 
     # The banits specific attack
-    def attack(self):
+    def EnemyAttack(self):
         ToolBox.space()
         ToolBox.line()
 
-        print(f"The Bandit slash you -{self.damage}")
-        Player.takeDamage(self.damage)
+        print(f"The Bandit slash towards you -{25} health")
+        return 25
         
 
     # The banits specific block
