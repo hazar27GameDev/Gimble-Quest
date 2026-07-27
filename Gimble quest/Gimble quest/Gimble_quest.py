@@ -72,8 +72,13 @@ def EnemyAction(EnemyType):
 
     if action == 1:
         print("block")
-    else:
-        damage = EnemyType.EnemyAttack()
+    elif action == 2:
+        damage = EnemyType.LightAttack()
+        Character.TakeDamage(damage)
+
+        ToolBox.space()
+    elif action == 3:
+        damage = EnemyType.HeavyAttack()
         Character.TakeDamage(damage)
 
         ToolBox.space()
@@ -106,69 +111,77 @@ def interaction(enemy):
             match UserChoice.upper():
                 case "A":
                     EndTurn = True
-                    print("You decide to attack")
+                    print("You decide to take an action")
                     ToolBox.space()
 
                     print("A. Attack")
-                    print("B. Block")
+                    print("B. Quick rest")
 
                     Action = input("Enter choice: ")
-                    match TypeClass.name:
-                        case "Fighter":
-                            ToolBox.space()
+                    match Action.upper():
+                        case "A":
+                            match TypeClass.name:
+                                case "Fighter":
+                                    ToolBox.space()
 
-                            print("A. Slash - 15HP, 10SP")
-                            print("B. Double slash - 25HP, 20SP")
+                                    print("A. Slash - 15HP, 10SP")
+                                    print("B. Double slash - 25HP, 20SP")
 
-                            Attack = input("Enter choice: ")
+                                    Attack = input("Enter choice: ")
 
-                            match Attack.upper():
-                                case "A":
-                                    TypeClass.Slash(enemy)
-                                    break
-                                case "B":
-                                    TypeClass.DoubleSlash(enemy)
-                                    break
+                                    match Attack.upper():
+                                        case "A":
+                                            TypeClass.Slash(enemy)
+                                            break
+                                        case "B":
+                                            TypeClass.DoubleSlash(enemy)
+                                            break
 
-                        case "Mage":
-                            ToolBox.space()
+                                case "Mage":
+                                    ToolBox.space()
 
-                            print("A. Fire breath - 10HP, 10SP")
-                            print("B. Spark bolt - 15HP, 20SP")
-                            print("C. FireBall - 30HP, 30SP")
+                                    print("A. Fire breath - 10HP, 10SP")
+                                    print("B. Spark bolt - 15HP, 20SP")
+                                    print("C. FireBall - 30HP, 30SP")
 
-                            Attack = input("Enter choice: ")
+                                    Attack = input("Enter choice: ")
 
-                            match Attack.upper():
-                                case "A":
-                                    TypeClass.FireBreath(enemy)
-                                    break
+                                    match Attack.upper():
+                                        case "A":
+                                            TypeClass.FireBreath(enemy)
+                                            break
 
-                                case "B":
-                                    TypeClass.SparkBolt(enemy)
-                                    break
+                                        case "B":
+                                            TypeClass.SparkBolt(enemy)
+                                            break
 
-                                case "C":
-                                    TypeClass.FireBall(enemy)
-                                    break
+                                        case "C":
+                                            TypeClass.FireBall(enemy)
+                                            break
 
-                        case "Ranger":
-                            ToolBox.space()
+                                case "Ranger":
+                                    ToolBox.space()
 
-                            print("A. Arrow - 10HP, 5SP")
-                            print("B. Charge shot - 20HP, 15SP")
+                                    print("A. Arrow - 10HP, 5SP")
+                                    print("B. Charge shot - 20HP, 15SP")
 
-                            Attack = input("Enter choice: ")
+                                    Attack = input("Enter choice: ")
 
-                            match Attack.upper():
-                                case "A":
-                                    TypeClass.Arrow(enemy)
-                                    break
-                                case "B":
-                                    TypeClass.ChargeShot(enemy)
-                                    break
+                                    match Attack.upper():
+                                        case "A":
+                                            TypeClass.Arrow(enemy)
+                                            break
+                                        case "B":
+                                            TypeClass.ChargeShot(enemy)
+                                            break
 
-                    break
+                            break
+                        case "B":
+                            print(f"You stand still and rest +{Character.QuickRest()}")
+                            
+                            break
+                        case _:
+                            print("Invalid option: Please try again")
                 case "B":
                     EndTurn = True
                     print("You decide to use a item")
@@ -190,6 +203,8 @@ def interaction(enemy):
                 break
             else:
                 EnemyAction(enemy)
+                if Character.health <= 0:
+                    break
 
 
 #MainMenu call dahhh

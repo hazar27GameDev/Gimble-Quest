@@ -25,14 +25,26 @@ class Player:
         self.health = health
         self.stamina = stamina
 
-    def attack(damage, stamina):
+    def attack(self, damage, StaminaLoss):
         print(f"You did {damage} damage")
-        print(f"-{stamina} stamina")
+        print(f"-{StaminaLoss} stamina")
+        self.stamina -= StaminaLoss
+
+    def QuickRest(self):
+        if self.stamina < 100:
+            StaminaGain = self.stamina - 100
+            self.stamina = StaminaGain
+            return StaminaGain
+        if self.stamina > 100:
+            self.stamina = 100
 
     def TakeDamage(self, amount):
         self.health -= amount
-        if self.health < 0:
+        if self.health <= 0:
             self.health = 0
+
+            ToolBox.space()
+            ToolBox.line()
             print(f"{self.name} has fallen")
 
     def PlayerInfo(self, TypeClass):
@@ -63,14 +75,14 @@ class Fighter:
         ToolBox.space()
         ToolBox.line()
         print("You slash towards the enemy")
-        Player.attack(15, 10)
+        Player.attack(self, 15, 10)
         enemy.takeDamage(15)
 
     def DoubleSlash(self, enemy):
         ToolBox.space()
         ToolBox.line()
         print("You slash towards the enemy twice")
-        Player.attack(25, 20)
+        Player.attack(self, 25, 20)
         enemy.takeDamage(25)
 #mage SubClass with all abilitys
 class Mage:

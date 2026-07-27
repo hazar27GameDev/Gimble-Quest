@@ -70,13 +70,19 @@ class Bandit(Enemy):
         super().__init__(name, health, damage)
 
     # The banits specific attack
-    def EnemyAttack(self):
+    def LightAttack(self):
+        ToolBox.space()
+        ToolBox.line()
+
+        print(f"The Bandit throws a knife towards you -{15} health")
+        return 15
+        
+    def HeavyAttack(self):
         ToolBox.space()
         ToolBox.line()
 
         print(f"The Bandit slash towards you -{25} health")
         return 25
-        
 
     # The banits specific block
     def block(self, block):
