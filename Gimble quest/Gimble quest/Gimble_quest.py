@@ -68,20 +68,21 @@ def CharacterCreator():
     return UserName, health, class_type
 
 def EnemyAction(EnemyType):
-    action = random.randint(1, 3)
+    if EnemyType.name != "Dragon":
+        action = random.randint(1, 3)
 
-    if action == 1:
-        print("block")
-    elif action == 2:
-        damage = EnemyType.LightAttack()
-        Character.TakeDamage(damage)
+        if action == 1:
+            print(f"{EnemyType.name} moves back too rest")
+        elif action == 2:
+            damage = EnemyType.LightAttack()
+            Character.TakeDamage(damage)
 
-        ToolBox.space()
-    elif action == 3:
-        damage = EnemyType.HeavyAttack()
-        Character.TakeDamage(damage)
+            ToolBox.space()
+        elif action == 3:
+            damage = EnemyType.HeavyAttack()
+            Character.TakeDamage(damage)
 
-        ToolBox.space()
+            ToolBox.space()
 
 #interactions
 def interaction(enemy):
@@ -115,7 +116,7 @@ def interaction(enemy):
                     ToolBox.space()
 
                     print("A. Attack")
-                    print("B. Quick rest")
+                    print("B. Rest")
 
                     Action = input("Enter choice: ")
                     match Action.upper():
@@ -124,55 +125,55 @@ def interaction(enemy):
                                 case "Fighter":
                                     ToolBox.space()
 
-                                    print("A. Slash - 15HP, 10SP")
-                                    print("B. Double slash - 25HP, 20SP")
+                                    print("A. Slash - 15HP, 25SP")
+                                    print("B. Double slash - 25HP, 35SP")
 
                                     Attack = input("Enter choice: ")
 
                                     match Attack.upper():
                                         case "A":
-                                            TypeClass.Slash(enemy)
+                                            TypeClass.Slash(enemy, Character)
                                             break
                                         case "B":
-                                            TypeClass.DoubleSlash(enemy)
+                                            TypeClass.DoubleSlash(enemy, Character)
                                             break
 
                                 case "Mage":
                                     ToolBox.space()
 
-                                    print("A. Fire breath - 10HP, 10SP")
-                                    print("B. Spark bolt - 15HP, 20SP")
-                                    print("C. FireBall - 30HP, 30SP")
+                                    print("A. Fire breath - 10HP, 20SP")
+                                    print("B. Spark bolt - 15HP, 30SP")
+                                    print("C. FireBall - 30HP, 50SP")
 
                                     Attack = input("Enter choice: ")
 
                                     match Attack.upper():
                                         case "A":
-                                            TypeClass.FireBreath(enemy)
+                                            TypeClass.FireBreath(enemy, Character)
                                             break
 
                                         case "B":
-                                            TypeClass.SparkBolt(enemy)
+                                            TypeClass.SparkBolt(enemy, Character)
                                             break
 
                                         case "C":
-                                            TypeClass.FireBall(enemy)
+                                            TypeClass.FireBall(enemy, Character)
                                             break
 
                                 case "Ranger":
                                     ToolBox.space()
 
-                                    print("A. Arrow - 10HP, 5SP")
-                                    print("B. Charge shot - 20HP, 15SP")
+                                    print("A. Arrow - 10HP, 15SP")
+                                    print("B. Charge shot - 20HP, 30SP")
 
                                     Attack = input("Enter choice: ")
 
                                     match Attack.upper():
                                         case "A":
-                                            TypeClass.Arrow(enemy)
+                                            TypeClass.Arrow(enemy, Character)
                                             break
                                         case "B":
-                                            TypeClass.ChargeShot(enemy)
+                                            TypeClass.ChargeShot(enemy, Character)
                                             break
 
                             break

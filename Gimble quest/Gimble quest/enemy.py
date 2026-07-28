@@ -84,10 +84,6 @@ class Bandit(Enemy):
         print(f"The Bandit slash towards you -{25} health")
         return 25
 
-    # The banits specific block
-    def block(self, block):
-        self.block = block
-        print(f"{self.name} blocks with {self.block} damage")
 
 
 
