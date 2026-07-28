@@ -75,14 +75,14 @@ class Fighter:
         ToolBox.space()
         ToolBox.line()
         print("You slash towards the enemy")
-        Player.attack(self, 15, 10)
+        Player.attack(15, 10)
         enemy.takeDamage(15)
 
     def DoubleSlash(self, enemy):
         ToolBox.space()
         ToolBox.line()
         print("You slash towards the enemy twice")
-        Player.attack(self, 25, 20)
+        Player.attack(25, 20)
         enemy.takeDamage(25)
 #mage SubClass with all abilitys
 class Mage:
