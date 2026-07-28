@@ -3,7 +3,11 @@ import ToolBox
 import Player
 import enemy
 
+EnemyStunTurn = 0
+
 Bandit = enemy.Bandit("Bandit", 50, 25)
+Slime = enemy.Slime("Slime", 30, 15)
+Dragon = enemy.Dragon("Dragon", 500, 100)
 
 #Main menu
 def MainMenu():
@@ -68,21 +72,67 @@ def CharacterCreator():
     return UserName, health, class_type
 
 def EnemyAction(EnemyType):
-    if EnemyType.name != "Dragon":
-        action = random.randint(1, 3)
+    global EnemyStunTurn
+    if EnemyStunTurn <= 0:
+        if EnemyType.name != "Dragon":
+            action = random.randint(1, 3)
 
-        if action == 1:
-            print(f"{EnemyType.name} moves back too rest")
-        elif action == 2:
-            damage = EnemyType.LightAttack()
-            Character.TakeDamage(damage)
+            if action == 1:
+                print(f"{EnemyType.name} moves back too rest")
+            elif action == 2:
+                damage = EnemyType.LightAttack()
+                Character.TakeDamage(damage)
 
-            ToolBox.space()
-        elif action == 3:
-            damage = EnemyType.HeavyAttack()
-            Character.TakeDamage(damage)
+                ToolBox.space()
+            elif action == 3:
+                damage = EnemyType.HeavyAttack()
+                Character.TakeDamage(damage)
 
-            ToolBox.space()
+                ToolBox.space()
+        elif EnemyType.name == "Dragon":
+            if EnemyType.health >= 250:
+                action = random.randint(1, 4)
+            else:
+                action = random.randint(1, 7)
+
+            if action == 1:
+                print(f"The {EnemyType.name} flys back too rest")
+            elif action == 2:
+                damage = EnemyType.LightAttack()
+                Character.TakeDamage(damage)
+
+                ToolBox.space()
+            elif action == 3:
+                damage = EnemyType.TailCleaver()
+                Character.TakeDamage(damage)
+
+                ToolBox.space()
+            elif action == 4:
+                damage = EnemyType.HeavyAttack()
+                Character.TakeDamage(damage)
+                EnemyStunTurn = 1
+
+                ToolBox.space()
+            elif action == 5:
+                damage = EnemyType.FireBreath()
+                Character.TakeDamage(damage)
+                EnemyStunTurn = 1
+
+                ToolBox.space()
+            elif action == 6:
+                damage = EnemyType.FireHeal()
+                EnemyStunTurn = 2
+
+                ToolBox.space()
+            elif action == 7:
+                damage = EnemyType.FireBall()
+                Character.TakeDamage(damage)
+                EnemyStunTurn = 2
+
+                ToolBox.space()
+    else:
+        EnemyStunTurn = EnemyStunTurn - 1
+        print(f"The {EnemyType.name} is stunned (stuned for {EnemyStunTurn} turns left)")
 
 #interactions
 def interaction(enemy):
@@ -227,4 +277,4 @@ ToolBox.space()
 ToolBox.line()
 input("Click Enter to begin: ")
 
-interaction(Bandit)
+interaction(Dragon)
