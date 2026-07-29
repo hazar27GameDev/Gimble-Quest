@@ -2,6 +2,7 @@ import random
 import ToolBox
 import Player
 import enemy
+import Items
 
 EnemyStunTurn = 0
 
@@ -11,12 +12,12 @@ Dragon = enemy.Dragon("Dragon", 500, 100)
 
 #Main menu
 def MainMenu():
-    print("Welcome to Epic RPG Game")
+    print("Welcome to Gimble Quest")
 
     ToolBox.line()
     ToolBox.space()
 
-    print("This is a tuff RPG made by the epic people named Harry, Kobi, and Jacobi")
+    print("This is a tuff RPG made by the epic people named Harry, Kobi, and Jacobi - here in spirit")
 
     ToolBox.line()
     ToolBox.space()
@@ -236,6 +237,20 @@ def interaction(enemy):
                 case "B":
                     EndTurn = True
                     print("You decide to use a item")
+
+                    ToolBox.space()
+
+                    print("A. Small Health Postion +25HP")
+                    print("B. Huge Health Postion +50HP")
+
+                    Action = input("Enter choice: ")
+                    match Action.upper():
+                        case "A":
+                            pass
+                            Items.item.AddHeal(Items.SmallHealthPotion)
+                        case _:
+                            print("Invalid option: Please try again")
+
                     break
                 case "C":
                     print("You decide to check your states")
