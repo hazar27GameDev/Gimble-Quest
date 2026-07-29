@@ -2,12 +2,14 @@ import random
 import ToolBox
 import Player
 import enemy
-import Inventory
+import InventoryClass
 
 EnemyStunTurn = 0
 
-Bandit = enemy.Bandit("Bandit", 50, 25)
+Bandit = enemy.Bandit("Bandit", 50, 20)
 Slime = enemy.Slime("Slime", 30, 15)
+Orge = enemy.Ogre("Ogre", 100, 30)
+
 Dragon = enemy.Dragon("Dragon", 500, 100)
 
 #Main menu
@@ -77,7 +79,12 @@ def EnemyAction(EnemyType):
     global EnemyStunTurn
     if EnemyStunTurn <= 0:
         if EnemyType.name != "Dragon":
-            action = random.randint(1, 3)
+            if EnemyType.attack >= 25:
+                action = random.randint(1, 3)
+            elif EnemyType.attack <= 50:
+                action = random.randint(1, 4)
+            else:
+                action = random.randint(1, 5)
 
             if action == 1:
                 ToolBox.space()
@@ -91,6 +98,14 @@ def EnemyAction(EnemyType):
             elif action == 3:
                 damage = EnemyType.HeavyAttack()
                 Character.TakeDamage(damage)
+            elif action == 4:
+                damage = EnemyType.StunAttack()
+                Character.TakeDamage(damage)
+                EnemyStunTurn = 1
+            elif action == 5:
+                damage = EnemyType.BigStunAttack()
+                Character.TakeDamage(damage)
+                EnemyStunTurn = 1
 
                 ToolBox.space()
         elif EnemyType.name == "Dragon":
@@ -162,9 +177,9 @@ def interaction(enemy):
         print("C. Display player info")
 
         ToolBox.space()
-        UserChoice = input("Enter option: ")
-
         while True:
+            UserChoice = input("Enter option: ")
+
             match UserChoice.upper():
                 case "A":
                     EndTurn = True
@@ -245,14 +260,26 @@ def interaction(enemy):
 
                     ToolBox.space()
 
-                    print("A. Small Health Postion +25HP")
-                    print("B. Huge Health Postion +50HP")
+                    SmallPots = 0
+                    BigPots = 0
+
+                    for i in Bag.items:
+                        if i == "Small Health Potion":
+                            SmallPots += 1
+                        elif i == "Big Health Potion":
+                            BigPots += 1
+
+                    print(f"A. Small Health Potion +25HP {SmallPots} left")
+                    print(f"B. Big Health Potion +50HP {BigPots} left")
 
                     Action = input("Enter choice: ")
                     match Action.upper():
                         case "A":
                             pass
                             Bag.use_item("Small health potion", Character)
+                        case "B":
+                            pass
+                            Bag.use_item("Big health potion", Character)
                         case _:
                             print("Invalid option: Please try again")
 
@@ -292,9 +319,10 @@ stamina = 100
 
 Character = Player.Player(UserName, health, MaxHealth, stamina)
 TypeClass = ClassType
-Bag = Inventory.Inventory()
+Bag = InventoryClass.Inventory()
 
-SmallPotion = Inventory.Potion("Small health potion", 25)
+SmallPotion = InventoryClass.Potion("Small health potion", 25)
+BigPotion = InventoryClass.Potion("Big health potion", 50)
 
 Bag.add_item(SmallPotion)
 
@@ -306,4 +334,4 @@ ToolBox.space()
 ToolBox.line()
 input("Click Enter to begin: ")
 
-interaction(Dragon)
+interaction(Orge)

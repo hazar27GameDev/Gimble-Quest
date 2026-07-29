@@ -81,14 +81,14 @@ class Bandit(Enemy):
         ToolBox.space()
         ToolBox.line()
 
-        print(f"The Bandit slash towards you -{25} health")
-        return 25
+        print(f"The Bandit slash towards you -{20} health")
+        return 20
 
 
 class Slime(Enemy):
 
     """
-    Represents a Bandit Inherited from Enemy.
+    Represents a Slime Inherited from Enemy.
     Author: Kobi Nichols
     Date: 22/06/2026
     Parameters: none
@@ -112,6 +112,43 @@ class Slime(Enemy):
 
         print(f"The Slime lunges at you -{20} health")
         return 20
+
+
+class Ogre(Enemy):
+
+    """
+    Represents a Bandit Inherited from Enemy.
+    Author: Harry imre
+    Date: 22/06/2026
+    Parameters: none
+    Returns: Enemy object
+    """
+    
+    def __init__(self, name, health, damage):
+        super().__init__(name, health, damage)
+
+    # The slime specific attack
+    def LightAttack(self):
+        ToolBox.space()
+        ToolBox.line()
+
+        print(f"The Ogre kicks you -{15} health")
+        return 15
+        
+    def HeavyAttack(self):
+        ToolBox.space()
+        ToolBox.line()
+
+        print(f"The Ogre swings his club at you -{25} health")
+        return 25
+
+    def StunAttack(self):
+        ToolBox.space()
+        ToolBox.line()
+
+        print(f"The Ogre slams his head into you -{30} health")
+        print("The Orge looks stunned")
+        return 30
 
 
 class Dragon(Enemy):
