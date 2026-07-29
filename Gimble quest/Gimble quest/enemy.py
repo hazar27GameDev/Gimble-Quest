@@ -132,14 +132,14 @@ class Dragon(Enemy):
         ToolBox.space()
         ToolBox.line()
 
-        print(f"The Dragon slashes towards you -{15} health")
+        print(f"The Dragon slashes towards you -{20} health")
         return 20
         
     def HeavyAttack(self):
         ToolBox.space()
         ToolBox.line()
 
-        print(f"The Dragon thrust down with a double‑claw slash -{30} health")
+        print(f"The Dragon thrust down with a double‑claw slash -{35} health")
         print("The attack creates a crater around you")
         print("\nThe dragon looks stunned")
         return 35
@@ -148,8 +148,8 @@ class Dragon(Enemy):
         ToolBox.space()
         ToolBox.line()
 
-        print(f"The Dragon swips its tail towards you -{20} health")
-        return 25
+        print(f"The Dragon swips its tail towards you -{15} health")
+        return 15
 
     def FireBreath(self):
         ToolBox.space()

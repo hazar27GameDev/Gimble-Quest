@@ -2,7 +2,7 @@ import random
 import ToolBox
 import Player
 import enemy
-import Items
+import Inventory
 
 EnemyStunTurn = 0
 
@@ -39,9 +39,9 @@ def CharacterCreator():
         print("Choice your class: ")
         ToolBox.line()
     
-        print("A. Fighter - 100HP")
-        print("B. Mage - 50HP")
-        print("C. Ranger - 75HP")
+        print("A. Fighter - 100MAX HP")
+        print("B. Mage - 50MAX HP")
+        print("C. Ranger - 75MAX HP")
 
         ToolBox.space()
         UserChoice = input("Enter option: ")
@@ -72,6 +72,7 @@ def CharacterCreator():
             break
     return UserName, health, class_type
 
+#allows the enemy to make actions
 def EnemyAction(EnemyType):
     global EnemyStunTurn
     if EnemyStunTurn <= 0:
@@ -79,6 +80,8 @@ def EnemyAction(EnemyType):
             action = random.randint(1, 3)
 
             if action == 1:
+                ToolBox.space()
+                ToolBox.line()
                 print(f"{EnemyType.name} moves back too rest")
             elif action == 2:
                 damage = EnemyType.LightAttack()
@@ -97,6 +100,8 @@ def EnemyAction(EnemyType):
                 action = random.randint(1, 7)
 
             if action == 1:
+                ToolBox.space()
+                ToolBox.line()
                 print(f"The {EnemyType.name} flys back too rest")
             elif action == 2:
                 damage = EnemyType.LightAttack()
@@ -135,7 +140,7 @@ def EnemyAction(EnemyType):
         EnemyStunTurn = EnemyStunTurn - 1
         print(f"The {EnemyType.name} is stunned (stuned for {EnemyStunTurn} turns left)")
 
-#interactions
+#player choice 
 def interaction(enemy):
     ToolBox.space()
 
@@ -194,7 +199,7 @@ def interaction(enemy):
 
                                     print("A. Fire breath - 10HP, 20SP")
                                     print("B. Spark bolt - 15HP, 30SP")
-                                    print("C. FireBall - 30HP, 50SP")
+                                    print("C. FireBall - 50HP, 50SP")
 
                                     Attack = input("Enter choice: ")
 
@@ -235,7 +240,7 @@ def interaction(enemy):
                         case _:
                             print("Invalid option: Please try again")
                 case "B":
-                    EndTurn = True
+                    EndTurn = False
                     print("You decide to use a item")
 
                     ToolBox.space()
@@ -247,7 +252,7 @@ def interaction(enemy):
                     match Action.upper():
                         case "A":
                             pass
-                            Items.item.AddHeal(Items.SmallHealthPotion)
+                            Bag.use_item("Small health potion", Character)
                         case _:
                             print("Invalid option: Please try again")
 
@@ -282,10 +287,19 @@ info = CharacterCreator()
 UserName = info[0]
 ClassType = info[2]
 health = info[1]
+MaxHealth = info[1]
 stamina = 100
 
-Character = Player.Player(UserName, health, stamina)
+Character = Player.Player(UserName, health, MaxHealth, stamina)
 TypeClass = ClassType
+Bag = Inventory.Inventory()
+
+SmallPotion = Inventory.Potion("Small health potion", 25)
+
+Bag.add_item(SmallPotion)
+
+#Bag.use_item("Small health potion", Character)
+
 Character.PlayerInfo(TypeClass)
 
 ToolBox.space()

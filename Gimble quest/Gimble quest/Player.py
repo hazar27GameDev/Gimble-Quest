@@ -20,9 +20,10 @@ class Player:
     Returns: Player object
     """
 
-    def __init__(self, name, health, stamina):
+    def __init__(self, name, health, MaxHealth, stamina):
         self.name = name
         self.health = health
+        self.MaxHealth = MaxHealth
         self.stamina = stamina
 
     def attack(self, damage, StaminaLoss):
@@ -127,8 +128,8 @@ class Mage:
             ToolBox.space()
             ToolBox.line()
             print("You shoot a fire ball towards the enemy")
-            character.attack(40, 50)
-            enemy.takeDamage(40)
+            character.attack(50, 50)
+            enemy.takeDamage(50)
         else:
             print("You ready your attack but nothing happens due to lack of stamina")
 #ranger SubClass with all abilitys
