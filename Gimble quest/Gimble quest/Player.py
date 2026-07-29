@@ -32,12 +32,7 @@ class Player:
         print(f"-{StaminaLoss} stamina")
 
     def QuickRest(self):
-        if self.stamina < 100:
-            StaminaGain = 100 - self.stamina
-            self.stamina = StaminaGain
-            return StaminaGain
-        if self.stamina > 100:
-            self.stamina = 100
+        StaminaGain = 100
 
     def TakeDamage(self, amount):
         self.health -= amount

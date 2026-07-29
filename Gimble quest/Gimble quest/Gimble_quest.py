@@ -8,9 +8,17 @@ EnemyStunTurn = 0
 
 Bandit = enemy.Bandit("Bandit", 50, 20)
 Slime = enemy.Slime("Slime", 30, 15)
-Orge = enemy.Ogre("Ogre", 100, 30)
+Goblin = enemy.Goblin("Goblin", 50, 25)
+Ogre = enemy.Ogre("Ogre", 100, 35)
 
 Dragon = enemy.Dragon("Dragon", 500, 100)
+
+EnemyPool = [Bandit, Slime, Goblin, Ogre]
+
+SmallPotion = InventoryClass.Potion("Small health potion", 25)
+BigPotion = InventoryClass.Potion("Big health potion", 50)
+
+ItemPool = [SmallPotion, BigPotion]
 
 #Main menu
 def MainMenu():
@@ -212,8 +220,8 @@ def interaction(enemy):
                                 case "Mage":
                                     ToolBox.space()
 
-                                    print("A. Fire breath - 10HP, 20SP")
-                                    print("B. Spark bolt - 15HP, 30SP")
+                                    print("A. Fire breath - 15HP, 20SP")
+                                    print("B. Spark bolt - 25HP, 30SP")
                                     print("C. FireBall - 50HP, 50SP")
 
                                     Attack = input("Enter choice: ")
@@ -249,7 +257,7 @@ def interaction(enemy):
 
                             break
                         case "B":
-                            print(f"You stand still and rest +{Character.QuickRest()}")
+                            print(f"You stand still and rest")
                             
                             break
                         case _:
@@ -260,17 +268,18 @@ def interaction(enemy):
 
                     ToolBox.space()
 
-                    SmallPots = 0
-                    BigPots = 0
+                    counts = {"Small health potion": 0, "Big health potion": 0}
 
-                    for i in Bag.items:
-                        if i == "Small Health Potion":
-                            SmallPots += 1
-                        elif i == "Big Health Potion":
-                            BigPots += 1
+                    for item in Bag.items:
+                        counts[item.name] += 1
 
-                    print(f"A. Small Health Potion +25HP {SmallPots} left")
-                    print(f"B. Big Health Potion +50HP {BigPots} left")
+
+                    small = counts["Small health potion"]
+                    big = counts["Big health potion"]
+
+                    print(f"A. Small Health Potion +25HP {small} left")
+                    print(f"B. Big Health Potion +50HP {big} left")
+
 
                     Action = input("Enter choice: ")
                     match Action.upper():
@@ -321,9 +330,6 @@ Character = Player.Player(UserName, health, MaxHealth, stamina)
 TypeClass = ClassType
 Bag = InventoryClass.Inventory()
 
-SmallPotion = InventoryClass.Potion("Small health potion", 25)
-BigPotion = InventoryClass.Potion("Big health potion", 50)
-
 Bag.add_item(SmallPotion)
 
 #Bag.use_item("Small health potion", Character)
@@ -334,4 +340,16 @@ ToolBox.space()
 ToolBox.line()
 input("Click Enter to begin: ")
 
-interaction(Orge)
+for i in range(4):
+    enemy = random.choice(EnemyPool)
+    EnemyPool.remove(enemy)
+
+    interaction(enemy)
+
+    ToolBox.space()
+    ToolBox.line()
+
+    print("You founded an item!")
+    Bag.add_item(random.choice(ItemPool))
+
+interaction(Dragon)

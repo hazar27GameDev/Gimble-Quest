@@ -16,7 +16,6 @@ class Inventory:
                 item.use(player)
                 self.items.remove(item)
                 return
-            print("Potion not found in inventory!")
 
 class Potion:
 
@@ -27,5 +26,9 @@ class Potion:
   def use(self, player):
       math = min(player.health + self.healing_amount, player.MaxHealth) - player.health
       player.health = min(player.health + self.healing_amount, player.MaxHealth)
+
+      ToolBox.space
+      ToolBox.space()
+
       print(f"+{math} Health")
     

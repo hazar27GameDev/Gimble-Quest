@@ -114,6 +114,42 @@ class Slime(Enemy):
         return 20
 
 
+class Goblin(Enemy):
+
+    """
+    Represents a Goblin Inherited from Enemy.
+    Author: Kobi Nichols
+    Date: 22/06/2026
+    Parameters: none
+    Returns: Enemy object
+    """
+    
+    def __init__(self, name, health, damage):
+        super().__init__(name, health, damage)
+
+    # The Goblin specific attack
+    def LightAttack(self):
+        ToolBox.space()
+        ToolBox.line()
+
+        print(f"The Goblin slices at you -{15} health")
+        return 15
+        
+    def HeavyAttack(self):
+        ToolBox.space()
+        ToolBox.line()
+
+        print(f"The Goblin lunges at you -{20} health")
+        return 20
+
+    def StunAttack(self):
+        ToolBox.space()
+        ToolBox.line()
+
+        print(f"The Goblin throws his dager at you -{15} health")
+        print("The Goblin has no wepond he is stunned")
+        return 15
+
 class Ogre(Enemy):
 
     """
@@ -127,7 +163,7 @@ class Ogre(Enemy):
     def __init__(self, name, health, damage):
         super().__init__(name, health, damage)
 
-    # The slime specific attack
+    # The Ogre specific attack
     def LightAttack(self):
         ToolBox.space()
         ToolBox.line()
