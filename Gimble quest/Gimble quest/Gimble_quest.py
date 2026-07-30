@@ -6,14 +6,18 @@ import InventoryClass
 
 EnemyStunTurn = 0
 
-Bandit = enemy.Bandit("Bandit", 50, 20)
-Slime = enemy.Slime("Slime", 30, 15)
-Goblin = enemy.Goblin("Goblin", 50, 25)
-Ogre = enemy.Ogre("Ogre", 100, 35)
+Bandit1 = enemy.Bandit("Bandit", 50, 20)
+Bandit2 = enemy.Bandit("Bandit", 50, 20)
+Slime1 = enemy.Slime("Grean Slime", 30, 15)
+Slime2 = enemy.Slime("Blue Slime", 40, 20)
+Goblin1 = enemy.Goblin("Goblin", 40, 25)
+Goblin2 = enemy.Goblin("Upper Goblin", 60, 30)
+Ogre1 = enemy.Ogre("Ogre", 100, 35)
+Ogre2 = enemy.Ogre("Ogre Boss", 125, 50)
 
-Dragon = enemy.Dragon("Dragon", 500, 100)
+Dragon = enemy.Dragon("Gibit Dragon", 500, 100)
 
-EnemyPool = [Bandit, Slime, Goblin, Ogre]
+EnemyPool = [Bandit1, Bandit2, Slime1, Slime2, Goblin1, Goblin2, Ogre1, Ogre2]
 
 SmallPotion = InventoryClass.Potion("Small health potion", 25)
 BigPotion = InventoryClass.Potion("Big health potion", 50)
@@ -338,6 +342,10 @@ Character.PlayerInfo(TypeClass)
 
 ToolBox.space()
 ToolBox.line()
+print("You have accepted a quest to deafeat the big bad gibit dragon")
+print("You set out on your adventure ")
+print("Now your adventure start")
+ToolBox.space()
 input("Click Enter to begin: ")
 
 for i in range(4):
@@ -353,3 +361,5 @@ for i in range(4):
     Bag.add_item(random.choice(ItemPool))
 
 interaction(Dragon)
+print("You have completed your quest!")
+print("The Gibit Dragon has been defeated")

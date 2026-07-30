@@ -25,15 +25,16 @@ class Player:
         self.health = health
         self.MaxHealth = MaxHealth
         self.stamina = stamina
-
+    #displays the attack and stamina loss
     def attack(self, damage, StaminaLoss):
         self.stamina -= StaminaLoss
         print(f"You did {damage} damage")
         print(f"-{StaminaLoss} stamina")
-
+    #is what is says
     def QuickRest(self):
         StaminaGain = 100
 
+#applys damage and checks for death
     def TakeDamage(self, amount):
         self.health -= amount
         if self.health <= 0:

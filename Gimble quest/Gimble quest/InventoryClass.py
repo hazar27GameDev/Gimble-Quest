@@ -16,7 +16,7 @@ class Inventory:
                 item.use(player)
                 self.items.remove(item)
                 return
-
+#inherits from the inventory subclass using the list items
 class Potion:
 
   def __init__(self, name, healing_amount):
