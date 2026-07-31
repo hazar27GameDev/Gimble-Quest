@@ -40,9 +40,10 @@
               "RelativeDocumentMoniker": "Gimble quest\\enemy.py",
               "ToolTip": "C:\\Users\\himre\\OneDrive\\Desktop\\software engineering\\Adventure\\Gimble-Quest\\Gimble quest\\Gimble quest\\enemy.py",
               "RelativeToolTip": "Gimble quest\\enemy.py",
-              "ViewState": "AgIAAIMAAAAAAAAAAAAwwIcAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAOwAAAAAAAAAAAAAAOIAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2026-06-26T02:33:16.688Z"
+              "WhenOpened": "2026-06-26T02:33:16.688Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -54,7 +55,8 @@
               "RelativeToolTip": "Gimble quest\\ToolBox.py",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2026-06-26T02:33:16.706Z"
+              "WhenOpened": "2026-06-26T02:33:16.706Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -64,7 +66,7 @@
               "RelativeDocumentMoniker": "Gimble quest\\InventoryClass.py",
               "ToolTip": "C:\\Users\\himre\\OneDrive\\Desktop\\software engineering\\Adventure\\Gimble-Quest\\Gimble quest\\Gimble quest\\InventoryClass.py",
               "RelativeToolTip": "Gimble quest\\InventoryClass.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABAAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
               "WhenOpened": "2026-06-26T02:33:16.792Z",
               "EditorCaption": ""
@@ -77,7 +79,7 @@
               "RelativeDocumentMoniker": "Gimble quest\\Player.py",
               "ToolTip": "C:\\Users\\himre\\OneDrive\\Desktop\\software engineering\\Adventure\\Gimble-Quest\\Gimble quest\\Gimble quest\\Player.py",
               "RelativeToolTip": "Gimble quest\\Player.py",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAwwBsAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAwwFkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
               "WhenOpened": "2026-07-13T08:53:50.54Z",
               "EditorCaption": ""
@@ -90,7 +92,7 @@
               "RelativeDocumentMoniker": "Gimble quest\\Gimble_quest.py",
               "ToolTip": "C:\\Users\\himre\\OneDrive\\Desktop\\software engineering\\Adventure\\Gimble-Quest\\Gimble quest\\Gimble quest\\Gimble_quest.py",
               "RelativeToolTip": "Gimble quest\\Gimble_quest.py",
-              "ViewState": "AgIAAKgAAAAAAAAAAAAAAGwBAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAFwAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
               "WhenOpened": "2026-06-26T02:33:16.864Z",
               "EditorCaption": ""

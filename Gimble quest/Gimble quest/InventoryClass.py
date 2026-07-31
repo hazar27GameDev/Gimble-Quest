@@ -15,7 +15,7 @@ class Inventory:
                 print(f"You decide to use a {item.name}")
                 item.use(player)
                 self.items.remove(item)
-                return
+
 #inherits from the inventory subclass using the list items
 class Potion:
 
